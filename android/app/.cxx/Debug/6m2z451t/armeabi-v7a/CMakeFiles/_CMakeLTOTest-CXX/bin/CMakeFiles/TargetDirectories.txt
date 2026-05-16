@@ -1,0 +1,4 @@
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/armeabi-v7a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/armeabi-v7a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/armeabi-v7a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/edit_cache.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/armeabi-v7a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/rebuild_cache.dir
