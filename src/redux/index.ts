@@ -12,7 +12,7 @@ import { configureStore } from '@reduxjs/toolkit';
 // import ManageAgentReducer from '@src/redux/slice/ManageAgent';
 // import MemberReducer from '@src/redux/slice/Member';
 // import NoteReducer from '@src/redux/slice/Note';
-// import SignupReducer from '@src/redux/slice/Signup';
+import SignupReducer from '@src/redux/slice/Signup';
 import ProfileReducer from '@src/redux/slice/Profile';
 // import ForgetPasswordReducer from '@src/redux/slice/ForgetPassword';
 // import WalletReducer from '@src/redux/slice/Wallet';
@@ -52,7 +52,7 @@ export const store = configureStore({
         // ManageAgentSlice: ManageAgentReducer,
         // MemberSlice: MemberReducer,
         // NoteSlice: NoteReducer,
-        // SignupSlice: SignupReducer,
+        SignupSlice: SignupReducer,
         ProfileSlice: ProfileReducer,
         // ForgetPasswordSlice: ForgetPasswordReducer,
         // WalletSlice: WalletReducer,

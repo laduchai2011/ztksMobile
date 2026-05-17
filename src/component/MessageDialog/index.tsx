@@ -57,7 +57,7 @@ const MessageDialog: FC<{ data: MessageDialogProps; isShow: boolean; onClose(): 
                     </Pressable>
                 </View>
                 <View style={styles.textContainer}>
-                    <Text>message</Text>
+                    <Text style={styles.text}>{data.message}</Text>
                 </View>
                 <View style={styles.iconContainer}>
                     {data.type === MessageDialog_TypeEnum.ERROR && <MaterialIcons name="error" size={28} color="red" />}

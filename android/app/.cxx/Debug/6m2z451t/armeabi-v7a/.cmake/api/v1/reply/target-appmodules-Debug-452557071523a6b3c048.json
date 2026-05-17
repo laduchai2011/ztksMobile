@@ -276,10 +276,6 @@
 	[
 		{
 			"backtrace" : 4,
-			"id" : "react_codegen_RNVectorIconsSpec::@479809fae146501fd34d"
-		},
-		{
-			"backtrace" : 4,
 			"id" : "react_codegen_RNKeychainSpec::@f9a2cb36ebca2de4baf9"
 		},
 		{
@@ -289,6 +285,10 @@
 		{
 			"backtrace" : 4,
 			"id" : "react_codegen_rnscreens::@25bcbd507e98d3a854ad"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "react_codegen_RNVectorIconsSpec::@479809fae146501fd34d"
 		}
 	],
 	"id" : "appmodules::@6890427a1f51a3e7e1df",

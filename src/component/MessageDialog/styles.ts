@@ -26,6 +26,9 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 10,
     },
+    text: {
+        textAlign: 'center',
+    },
     iconContainer: {
         justifyContent: 'center',
         alignItems: 'center',

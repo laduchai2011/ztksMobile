@@ -111,7 +111,7 @@ export const accountRTK = createApi({
             providesTags: ['Recommend'],
         }),
         // Mutation (POST)
-        signup: builder.mutation<router_res_type, { body: AccountField; token: string }>({
+        signup: builder.mutation<MyResponse<AccountField>, { body: AccountField; token: string }>({
             query: ({ body, token }) => ({
                 url: ACCOUNT_API.SIGNUP,
                 method: 'POST',

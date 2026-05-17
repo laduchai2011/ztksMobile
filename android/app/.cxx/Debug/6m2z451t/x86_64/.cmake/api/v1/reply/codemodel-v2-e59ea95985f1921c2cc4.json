@@ -114,35 +114,35 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appmodules::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appmodules-Debug-c25b57b62e86945ca117.json",
+					"jsonFile" : "target-appmodules-Debug-521ad1bc83932404cd33.json",
 					"name" : "appmodules",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "react_codegen_RNKeychainSpec::@f9a2cb36ebca2de4baf9",
-					"jsonFile" : "target-react_codegen_RNKeychainSpec-Debug-2f10426b87f1a8096185.json",
+					"jsonFile" : "target-react_codegen_RNKeychainSpec-Debug-174cfc84f3b1d5df0a52.json",
 					"name" : "react_codegen_RNKeychainSpec",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "react_codegen_RNVectorIconsSpec::@479809fae146501fd34d",
-					"jsonFile" : "target-react_codegen_RNVectorIconsSpec-Debug-eeca57bc86fc7ae2a366.json",
+					"jsonFile" : "target-react_codegen_RNVectorIconsSpec-Debug-433f8905d6e43059278c.json",
 					"name" : "react_codegen_RNVectorIconsSpec",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "react_codegen_rnscreens::@25bcbd507e98d3a854ad",
-					"jsonFile" : "target-react_codegen_rnscreens-Debug-3b3aa6b3b6adac237e0e.json",
+					"jsonFile" : "target-react_codegen_rnscreens-Debug-5e6a7fd649c1f8850ecb.json",
 					"name" : "react_codegen_rnscreens",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "react_codegen_safeareacontext::@7984cd80db47aa7b952a",
-					"jsonFile" : "target-react_codegen_safeareacontext-Debug-700589932c6252216978.json",
+					"jsonFile" : "target-react_codegen_safeareacontext-Debug-b62f443a614555eb621f.json",
 					"name" : "react_codegen_safeareacontext",
 					"projectIndex" : 0
 				}
@@ -152,7 +152,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/armeabi-v7a",
+		"build" : "D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64",
 		"source" : "D:/ztksMobile/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup"
 	},
 	"version" : 
