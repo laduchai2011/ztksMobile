@@ -1,29 +1,29 @@
 {
-    "project_info": {
-        "project_number": "524852897614",
-        "project_id": "ztksoptsms",
-        "storage_bucket": "ztksoptsms.firebasestorage.app"
-    },
-    "client": [
-        {
-            "client_info": {
-                "mobilesdk_app_id": "1:524852897614:android:6ff902b48deeef5769e01f",
-                "android_client_info": {
-                    "package_name": "com.ztksmobile"
-                }
-            },
-            "oauth_client": [],
-            "api_key": [
-                {
-                    "current_key": "AIzaSyAhw30LJ5ejNohPgYdeZtFKojTEsOXM31A"
-                }
-            ],
-            "services": {
-                "appinvite_service": {
-                    "other_platform_oauth_client": []
-                }
-            }
+  "project_info": {
+    "project_number": "524852897614",
+    "project_id": "ztksoptsms",
+    "storage_bucket": "ztksoptsms.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524852897614:android:6ff902b48deeef5769e01f",
+        "android_client_info": {
+          "package_name": "com.ztksmobile"
         }
-    ],
-    "configuration_version": "1"
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhw30LJ5ejNohPgYdeZtFKojTEsOXM31A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
 }

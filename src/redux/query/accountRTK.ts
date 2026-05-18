@@ -25,16 +25,18 @@ import {
     LeaveAdminBodyField,
 } from '@src/dataStruct/account/body';
 import { ACCOUNT_API } from '@src/const/api/account';
-import { router_res_type } from '@src/interface';
+// import { router_res_type } from '@src/interface';
 import { MyResponse } from '@src/dataStruct/response';
 import { DeviceEnum } from '@src/device/type';
+import { setRefreshToken, setAccessToken, setSocketToken } from '@src/token';
+import { setAccountId } from '@src/utility/checkSignin';
 
 export const accountRTK = createApi({
     reducerPath: 'accountRTK',
     baseQuery: fetchBaseQuery({
         baseUrl: '',
         prepareHeaders: async (headers) => {
-            headers.set('x-device-type', DeviceEnum.WEB);
+            headers.set('x-device-type', DeviceEnum.MOBILE);
             return headers;
         },
     }),
@@ -139,6 +141,34 @@ export const accountRTK = createApi({
                 method: 'POST',
                 body,
             }),
+
+            transformResponse: (response: MyResponse<AccountField>, meta) => {
+                const headers = meta?.response?.headers;
+
+                const accessToken = headers?.get('x-access-token');
+                const refreshToken = headers?.get('x-refresh-token');
+                const socketToken = headers?.get('x-socket-token');
+                const accountId = headers?.get('x-account-id');
+
+                if (accessToken) {
+                    setAccessToken(accessToken);
+                }
+
+                if (refreshToken) {
+                    setRefreshToken(refreshToken);
+                }
+
+                if (socketToken) {
+                    setSocketToken(socketToken);
+                }
+
+                if (accountId) {
+                    setAccountId(accountId);
+                }
+
+                return response;
+            },
+
             invalidatesTags: ['Account'], // dùng nếu muốn refetch danh sách sau khi thêm
         }),
         signout: builder.mutation<MyResponse<unknown>, void>({

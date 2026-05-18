@@ -12,6 +12,7 @@ import { configureStore } from '@reduxjs/toolkit';
 // import ManageAgentReducer from '@src/redux/slice/ManageAgent';
 // import MemberReducer from '@src/redux/slice/Member';
 // import NoteReducer from '@src/redux/slice/Note';
+import SigninReducer from '@src/redux/slice/Signin';
 import SignupReducer from '@src/redux/slice/Signup';
 import ProfileReducer from '@src/redux/slice/Profile';
 // import ForgetPasswordReducer from '@src/redux/slice/ForgetPassword';
@@ -22,7 +23,7 @@ import ProfileReducer from '@src/redux/slice/Profile';
 // import PostReducer from '@src/redux/slice/Post';
 // import RegisterPostReducer from '@src/redux/slice/RegisterPost';
 // import LeaveReducer from '@src/redux/slice/Leave';
-// import { accountRTK } from './query/accountRTK';
+import { accountRTK } from './query/accountRTK';
 // import { myCustomerRTK } from './query/myCustomerRTK';
 // import { messageV1RTK } from './query/messageV1RTK';
 // import { zaloRTK } from './query/zaloRTK';
@@ -52,6 +53,7 @@ export const store = configureStore({
         // ManageAgentSlice: ManageAgentReducer,
         // MemberSlice: MemberReducer,
         // NoteSlice: NoteReducer,
+        SigninSlice: SigninReducer,
         SignupSlice: SignupReducer,
         ProfileSlice: ProfileReducer,
         // ForgetPasswordSlice: ForgetPasswordReducer,
@@ -62,7 +64,7 @@ export const store = configureStore({
         // PostSlice: PostReducer,
         // RegisterPostSlice: RegisterPostReducer,
         // LeaveSlice: LeaveReducer,
-        // [accountRTK.reducerPath]: accountRTK.reducer,
+        [accountRTK.reducerPath]: accountRTK.reducer,
         // [myCustomerRTK.reducerPath]: myCustomerRTK.reducer,
         // [messageV1RTK.reducerPath]: messageV1RTK.reducer,
         // [zaloRTK.reducerPath]: zaloRTK.reducer,
@@ -77,9 +79,8 @@ export const store = configureStore({
         // [postRTK.reducerPath]: postRTK.reducer,
     },
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware()
-            .concat
-            // accountRTK.middleware,
+        getDefaultMiddleware().concat(
+            accountRTK.middleware
             // myCustomerRTK.middleware,
             // messageV1RTK.middleware,
             // zaloRTK.middleware,
@@ -92,7 +93,7 @@ export const store = configureStore({
             // voucherRTK.middleware,
             // bankRTK.middleware,
             // postRTK.middleware
-            (),
+        ),
 });
 
 // Type hỗ trợ

@@ -1,9 +1,10 @@
 import * as Keychain from 'react-native-keychain';
-import { getAccessToken, getRefreshToken } from '@src/token';
+import { getAccessToken, getRefreshToken, getSocketToken } from '@src/token';
 
 export async function isSignin() {
     const accessToken = await getAccessToken();
     const refreshToken = await getRefreshToken();
+    const socketToken = await getSocketToken();
     const accountId = await getAccountId();
 
     if (accessToken && refreshToken && accountId) {

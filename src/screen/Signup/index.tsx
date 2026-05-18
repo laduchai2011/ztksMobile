@@ -222,6 +222,11 @@ const Signup = () => {
     }, [dispatch, token, account, signup]);
 
     const handleSignup = () => {
+        checkString(account.userName, account_enum.USERNAME);
+        checkString(account.password, account_enum.PASSWORD);
+        checkString(account.phone, account_enum.PHONE);
+        checkString(account.firstName, account_enum.FIRST_NAME);
+        checkString(account.lastName, account_enum.LAST_NAME);
         handleSendOtp();
     };
 
@@ -320,7 +325,7 @@ const Signup = () => {
                     </TouchableOpacity>
                 </View>
             </View>
-            <OtpInputDialog confirmation={confirmation} />
+            {confirmation && <OtpInputDialog confirmation={confirmation} />}
             <MyMessageDialog />
             <MyLoading />
         </View>

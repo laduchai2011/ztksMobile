@@ -34,6 +34,23 @@ export const getRefreshToken = async () => {
     }
 };
 
+export const getSocketToken = async () => {
+    try {
+        const credentials = await Keychain.getGenericPassword({
+            service: 'socketToken',
+        });
+
+        if (credentials) {
+            return credentials.password;
+        }
+
+        return null;
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+};
+
 export const setAccessToken = async (token: string) => {
     try {
         await Keychain.setGenericPassword('access', token, {
@@ -50,6 +67,18 @@ export const setRefreshToken = async (token: string) => {
     try {
         await Keychain.setGenericPassword('refresh', token, {
             service: 'refreshToken',
+        });
+        return true;
+    } catch (error) {
+        console.log(error);
+        return false;
+    }
+};
+
+export const setSocketToken = async (token: string) => {
+    try {
+        await Keychain.setGenericPassword('socket', token, {
+            service: 'socketToken',
         });
         return true;
     } catch (error) {
