@@ -1,4 +1,4 @@
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, Text, View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import BottomTabs from './bottomTabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -13,7 +13,38 @@ const Stack = createNativeStackNavigator();
 
 function Navigator() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator
+            screenOptions={{
+                header: ({ navigation, options, back }) => (
+                    <View
+                        style={{
+                            height: 60, // thu nhỏ header
+                            backgroundColor: '#1E90FF',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            paddingHorizontal: 16,
+                        }}
+                    >
+                        <Text
+                            style={{
+                                color: 'white',
+                                fontSize: 18,
+                                fontWeight: 'bold',
+                            }}
+                        >
+                            {options.title}
+                        </Text>
+
+                        {back && (
+                            <TouchableOpacity onPress={() => navigation.goBack()}>
+                                <Ionicons name="arrow-back" size={24} color="white" />
+                            </TouchableOpacity>
+                        )}
+                    </View>
+                ),
+            }}
+        >
             {/* Tabs */}
             <Stack.Screen
                 name={NavigateEnum.ROOT_TAB}

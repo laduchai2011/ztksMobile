@@ -4,6 +4,7 @@ import { styles } from './styles';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { NavigateEnum } from '@src/navigation/type';
 import { isSignin } from '@src/utility/checkSignin';
+import ReplyMember from './component/ReplyMember';
 
 const Message = () => {
     const navigation = useNavigation<any>();
@@ -20,7 +21,7 @@ const Message = () => {
 
     return (
         <View style={styles.parent}>
-            <Text>Message</Text>
+            <ReplyMember />
         </View>
     );
 };
