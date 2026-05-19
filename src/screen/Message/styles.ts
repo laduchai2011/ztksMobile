@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-    parent: {},
+    parent: {
+        flex: 1,
+    },
 });

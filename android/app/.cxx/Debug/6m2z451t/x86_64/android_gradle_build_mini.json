@@ -1,9 +1,12 @@
 {
   "buildFiles": [
+    "D:\\ztksMobile\\node_modules\\react-native-gesture-handler\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
     "D:\\ztksMobile\\node_modules\\react-native-keychain\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
+    "D:\\ztksMobile\\node_modules\\react-native-reanimated\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
     "D:\\ztksMobile\\node_modules\\react-native-safe-area-context\\android\\src\\main\\jni\\CMakeLists.txt",
     "D:\\ztksMobile\\node_modules\\react-native-screens\\android\\src\\main\\jni\\CMakeLists.txt",
     "D:\\ztksMobile\\node_modules\\react-native-vector-icons\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
+    "D:\\ztksMobile\\node_modules\\react-native-worklets\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
     "D:\\ztksMobile\\node_modules\\react-native\\ReactAndroid\\cmake-utils\\default-app-setup\\CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
@@ -26,6 +29,11 @@
       "abi": "x86_64",
       "runtimeFiles": []
     },
+    "react_codegen_rnreanimated::@8afabad14bfffa3f8b9a": {
+      "artifactName": "react_codegen_rnreanimated",
+      "abi": "x86_64",
+      "runtimeFiles": []
+    },
     "react_codegen_safeareacontext::@7984cd80db47aa7b952a": {
       "artifactName": "react_codegen_safeareacontext",
       "abi": "x86_64",
@@ -35,6 +43,11 @@
         "C:\\Users\\laduc\\.gradle\\caches\\9.3.1\\transforms\\53acf3459c05457432c528563fd67fa5\\workspace\\transformed\\react-android-0.85.3-debug\\prefab\\modules\\jsi\\libs\\android.x86_64\\libjsi.so",
         "C:\\Users\\laduc\\.gradle\\caches\\9.3.1\\transforms\\53acf3459c05457432c528563fd67fa5\\workspace\\transformed\\react-android-0.85.3-debug\\prefab\\modules\\reactnative\\libs\\android.x86_64\\libreactnative.so"
       ]
+    },
+    "react_codegen_rngesturehandler_codegen::@39f233abcd2c728bc6ec": {
+      "artifactName": "react_codegen_rngesturehandler_codegen",
+      "abi": "x86_64",
+      "runtimeFiles": []
     },
     "react_codegen_rnscreens::@25bcbd507e98d3a854ad": {
       "artifactName": "react_codegen_rnscreens",
@@ -60,6 +73,11 @@
     },
     "react_codegen_RNKeychainSpec::@f9a2cb36ebca2de4baf9": {
       "artifactName": "react_codegen_RNKeychainSpec",
+      "abi": "x86_64",
+      "runtimeFiles": []
+    },
+    "react_codegen_rnworklets::@68f58d84d4754f193387": {
+      "artifactName": "react_codegen_rnworklets",
       "abi": "x86_64",
       "runtimeFiles": []
     }

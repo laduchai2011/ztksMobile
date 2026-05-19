@@ -28,4 +28,15 @@ export const styles = StyleSheet.create({
     addedTxt: {
         color: 'blue',
     },
+    notAddedList: {
+        padding: 5,
+    },
+    notAddedMore: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 5,
+    },
+    notAddedTxt: {
+        color: 'blue',
+    },
 });

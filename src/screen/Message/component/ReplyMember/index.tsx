@@ -6,6 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { AccountField } from '@src/dataStruct/account';
 import { SEE_MORE } from '@src/const/text';
 import Added from './component/Added';
+import NotAdded from './component/NotAdded';
 
 const ReplyMember = () => {
     const [isShowAdded, setIsShowAdded] = useState<boolean>(false);
@@ -16,7 +17,7 @@ const ReplyMember = () => {
 
     const [isShowNotAdded, setIsShowNotAdded] = useState<boolean>(false);
     const [notReplyAccounts, setNotReplyAccount] = useState<AccountField[]>([]);
-    const [notReplyAccountTotal, setNotReplyAccountTotal] = useState<number>(-1);
+    const [notReplyAccountTotal, setNotReplyAccountTotal] = useState<number>(20);
     const [notReplyAccountIndex, setNotReplyAccountIndex] = useState<number>(1);
     const notReplyAccountSize = 10;
 
@@ -36,6 +37,10 @@ const ReplyMember = () => {
 
     const handleSeeMore_replyAccount = () => {
         setReplyAccountIndex((pre) => pre + 1);
+    };
+
+    const handleSeeMore_notReplyAccount = () => {
+        setNotReplyAccountIndex((pre) => pre + 1);
     };
 
     return (
@@ -66,6 +71,18 @@ const ReplyMember = () => {
                     <View style={styles.addedMore}>
                         <Pressable onPress={handleSeeMore_replyAccount}>
                             <Text style={styles.addedTxt}>{SEE_MORE}</Text>
+                        </Pressable>
+                    </View>
+                )}
+            </View>
+            <View style={styles.notAddedList}>
+                <NotAdded />
+                <NotAdded />
+                <NotAdded />
+                {notReplyAccounts.length < notReplyAccountTotal && (
+                    <View style={styles.notAddedMore}>
+                        <Pressable onPress={handleSeeMore_notReplyAccount}>
+                            <Text style={styles.notAddedTxt}>{SEE_MORE}</Text>
                         </Pressable>
                     </View>
                 )}

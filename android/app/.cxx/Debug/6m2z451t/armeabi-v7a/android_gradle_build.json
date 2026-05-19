@@ -1,9 +1,12 @@
 {
   "buildFiles": [
+    "D:\\ztksMobile\\node_modules\\react-native-gesture-handler\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
     "D:\\ztksMobile\\node_modules\\react-native-keychain\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
+    "D:\\ztksMobile\\node_modules\\react-native-reanimated\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
     "D:\\ztksMobile\\node_modules\\react-native-safe-area-context\\android\\src\\main\\jni\\CMakeLists.txt",
     "D:\\ztksMobile\\node_modules\\react-native-screens\\android\\src\\main\\jni\\CMakeLists.txt",
     "D:\\ztksMobile\\node_modules\\react-native-vector-icons\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
+    "D:\\ztksMobile\\node_modules\\react-native-worklets\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
     "D:\\ztksMobile\\node_modules\\react-native\\ReactAndroid\\cmake-utils\\default-app-setup\\CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
@@ -44,6 +47,16 @@
       "abi": "armeabi-v7a",
       "artifactName": "react_codegen_RNVectorIconsSpec"
     },
+    "react_codegen_rngesturehandler_codegen::@39f233abcd2c728bc6ec": {
+      "toolchain": "toolchain",
+      "abi": "armeabi-v7a",
+      "artifactName": "react_codegen_rngesturehandler_codegen"
+    },
+    "react_codegen_rnreanimated::@8afabad14bfffa3f8b9a": {
+      "toolchain": "toolchain",
+      "abi": "armeabi-v7a",
+      "artifactName": "react_codegen_rnreanimated"
+    },
     "react_codegen_rnscreens::@25bcbd507e98d3a854ad": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
@@ -54,6 +67,11 @@
         "C:\\Users\\laduc\\.gradle\\caches\\9.3.1\\transforms\\53acf3459c05457432c528563fd67fa5\\workspace\\transformed\\react-android-0.85.3-debug\\prefab\\modules\\jsi\\libs\\android.armeabi-v7a\\libjsi.so",
         "C:\\Users\\laduc\\.gradle\\caches\\9.3.1\\transforms\\d6d633a9edf24ef67434af76f13f05f7\\workspace\\transformed\\fbjni-0.7.0\\prefab\\modules\\fbjni\\libs\\android.armeabi-v7a\\libfbjni.so"
       ]
+    },
+    "react_codegen_rnworklets::@68f58d84d4754f193387": {
+      "toolchain": "toolchain",
+      "abi": "armeabi-v7a",
+      "artifactName": "react_codegen_rnworklets"
     },
     "react_codegen_safeareacontext::@7984cd80db47aa7b952a": {
       "toolchain": "toolchain",

@@ -12,6 +12,30 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64/CMakeFiles/cmake.verify_globs")
 endif()
 
+# react_codegen_SRCS at D:/ztksMobile/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/ztksMobile/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "D:/ztksMobile/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/rngesturehandler_codegen-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at D:/ztksMobile/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/ztksMobile/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/*.cpp")
+set(OLD_GLOB
+  "D:/ztksMobile/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/ComponentDescriptors.cpp"
+  "D:/ztksMobile/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/EventEmitters.cpp"
+  "D:/ztksMobile/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/Props.cpp"
+  "D:/ztksMobile/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/ShadowNodes.cpp"
+  "D:/ztksMobile/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64/CMakeFiles/cmake.verify_globs")
+endif()
+
 # react_codegen_SRCS at D:/ztksMobile/node_modules/react-native-keychain/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/ztksMobile/node_modules/react-native-keychain/android/build/generated/source/codegen/jni/*.cpp")
 set(OLD_GLOB
@@ -30,6 +54,30 @@ set(OLD_GLOB
   "D:/ztksMobile/node_modules/react-native-keychain/android/build/generated/source/codegen/jni/react/renderer/components/RNKeychainSpec/Props.cpp"
   "D:/ztksMobile/node_modules/react-native-keychain/android/build/generated/source/codegen/jni/react/renderer/components/RNKeychainSpec/ShadowNodes.cpp"
   "D:/ztksMobile/node_modules/react-native-keychain/android/build/generated/source/codegen/jni/react/renderer/components/RNKeychainSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at D:/ztksMobile/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/ztksMobile/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "D:/ztksMobile/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/rnreanimated-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at D:/ztksMobile/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/ztksMobile/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/*.cpp")
+set(OLD_GLOB
+  "D:/ztksMobile/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/ComponentDescriptors.cpp"
+  "D:/ztksMobile/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/EventEmitters.cpp"
+  "D:/ztksMobile/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/Props.cpp"
+  "D:/ztksMobile/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/ShadowNodes.cpp"
+  "D:/ztksMobile/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated/States.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -161,6 +209,30 @@ set(OLD_GLOB
   "D:/ztksMobile/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/Props.cpp"
   "D:/ztksMobile/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/ShadowNodes.cpp"
   "D:/ztksMobile/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at D:/ztksMobile/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/ztksMobile/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "D:/ztksMobile/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/rnworklets-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at D:/ztksMobile/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/ztksMobile/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/*.cpp")
+set(OLD_GLOB
+  "D:/ztksMobile/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/ComponentDescriptors.cpp"
+  "D:/ztksMobile/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/EventEmitters.cpp"
+  "D:/ztksMobile/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/Props.cpp"
+  "D:/ztksMobile/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/ShadowNodes.cpp"
+  "D:/ztksMobile/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets/States.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

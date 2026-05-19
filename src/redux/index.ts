@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 // import AppReducer from '@src/redux/slice/App';
 // import Home1Reducer from '@src/redux/slice/Home1';
-// import MessageV1Reducer from '@src/redux/slice/MessageV1';
+import MessageReducer from '@src/redux/slice/Message';
 // import ManageMembersReducer from '@src/redux/slice/ManageMembers';
 // import MemberReceiveMessageReducer from '@src/redux/slice/MemberReceiveMessage';
 // import OaReducer from '@src/redux/slice/Oa';
@@ -42,7 +42,7 @@ export const store = configureStore({
         dummy: (state = {}) => state,
         // AppSlice: AppReducer,
         // Home1Slice: Home1Reducer,
-        // MessageV1Slice: MessageV1Reducer,
+        MessageSlice: MessageReducer,
         // ManageMembersSlice: ManageMembersReducer,
         // MemberReceiveMessageSlice: MemberReceiveMessageReducer,
         // OaSlice: OaReducer,

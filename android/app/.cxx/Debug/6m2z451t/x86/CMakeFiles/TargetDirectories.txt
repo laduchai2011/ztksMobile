@@ -1,9 +1,15 @@
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/CMakeFiles/appmodules.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/CMakeFiles/edit_cache.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/CMakeFiles/rebuild_cache.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/edit_cache.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/rebuild_cache.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/RNKeychainSpec_autolinked_build/CMakeFiles/react_codegen_RNKeychainSpec.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/RNKeychainSpec_autolinked_build/CMakeFiles/edit_cache.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/RNKeychainSpec_autolinked_build/CMakeFiles/rebuild_cache.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rnreanimated_autolinked_build/CMakeFiles/edit_cache.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rnreanimated_autolinked_build/CMakeFiles/rebuild_cache.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/safeareacontext_autolinked_build/CMakeFiles/edit_cache.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/safeareacontext_autolinked_build/CMakeFiles/rebuild_cache.dir
@@ -13,3 +19,6 @@ D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rnscreens_autolinked_build/CMa
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/RNVectorIconsSpec_autolinked_build/CMakeFiles/react_codegen_RNVectorIconsSpec.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/RNVectorIconsSpec_autolinked_build/CMakeFiles/edit_cache.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/RNVectorIconsSpec_autolinked_build/CMakeFiles/rebuild_cache.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rnworklets_autolinked_build/CMakeFiles/edit_cache.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rnworklets_autolinked_build/CMakeFiles/rebuild_cache.dir

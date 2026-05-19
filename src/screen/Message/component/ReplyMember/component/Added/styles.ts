@@ -33,5 +33,17 @@ export const styles = StyleSheet.create({
     },
     txt2: {
         fontWeight: 500,
+        fontSize: 18,
+    },
+    statusContainer: {
+        flexDirection: 'row',
+    },
+    oneStatus: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 45,
+    },
+    txtc: {
+        marginLeft: 5,
     },
 });
