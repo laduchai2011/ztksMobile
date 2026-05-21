@@ -168,7 +168,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appmodules::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appmodules-Debug-df0c253054acdb73c1a9.json",
+					"jsonFile" : "target-appmodules-Debug-4823843ce504c1d97698.json",
 					"name" : "appmodules",
 					"projectIndex" : 0
 				},
@@ -203,7 +203,7 @@
 				{
 					"directoryIndex" : 5,
 					"id" : "react_codegen_rnscreens::@25bcbd507e98d3a854ad",
-					"jsonFile" : "target-react_codegen_rnscreens-Debug-f24ee54697a208bde998.json",
+					"jsonFile" : "target-react_codegen_rnscreens-Debug-df90fc7c40c995fa7c47.json",
 					"name" : "react_codegen_rnscreens",
 					"projectIndex" : 0
 				},
@@ -217,7 +217,7 @@
 				{
 					"directoryIndex" : 4,
 					"id" : "react_codegen_safeareacontext::@7984cd80db47aa7b952a",
-					"jsonFile" : "target-react_codegen_safeareacontext-Debug-f19728f819c81070d661.json",
+					"jsonFile" : "target-react_codegen_safeareacontext-Debug-df30f40b793b943a3027.json",
 					"name" : "react_codegen_safeareacontext",
 					"projectIndex" : 0
 				}
@@ -227,7 +227,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86",
+		"build" : "D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/arm64-v8a",
 		"source" : "D:/ztksMobile/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup"
 	},
 	"version" : 

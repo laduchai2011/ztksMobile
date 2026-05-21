@@ -17,8 +17,13 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
     },
+    hiddenContent: {
+        position: 'absolute',
+        opacity: 0,
+        zIndex: -1,
+    },
     addedList: {
-        padding: 5,
+        overflow: 'hidden',
     },
     addedMore: {
         alignItems: 'center',
@@ -29,7 +34,7 @@ export const styles = StyleSheet.create({
         color: 'blue',
     },
     notAddedList: {
-        padding: 5,
+        overflow: 'hidden',
     },
     notAddedMore: {
         alignItems: 'center',

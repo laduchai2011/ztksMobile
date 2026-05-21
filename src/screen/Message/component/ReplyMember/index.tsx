@@ -1,6 +1,7 @@
 import React, { memo, useState } from 'react';
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable, LayoutChangeEvent } from 'react-native';
 import { styles } from './styles';
+import Animated, { LinearTransition } from 'react-native-reanimated';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { AccountField } from '@src/dataStruct/account';
@@ -43,26 +44,8 @@ const ReplyMember = () => {
         setNotReplyAccountIndex((pre) => pre + 1);
     };
 
-    return (
-        <View style={styles.parent}>
-            <View style={styles.header}>
-                <View style={styles.txtContainer}>
-                    <Text style={styles.txt}>Thành viên trả lời tin nhắn</Text>
-                </View>
-                <View style={styles.iconContainer}>
-                    <Ionicons name="add" size={28} color="green" />
-                    {!isShowAdded && (
-                        <Pressable onPress={handleShowDown}>
-                            <Entypo name="chevron-small-down" size={28} color="black" />
-                        </Pressable>
-                    )}
-                    {isShowAdded && (
-                        <Pressable onPress={handleShowUp}>
-                            <Entypo name="chevron-small-up" size={28} color="black" />
-                        </Pressable>
-                    )}
-                </View>
-            </View>
+    const layoutAdded = () => {
+        return (
             <View style={styles.addedList}>
                 <Added />
                 <Added />
@@ -75,6 +58,11 @@ const ReplyMember = () => {
                     </View>
                 )}
             </View>
+        );
+    };
+
+    const layoutNotAdded = () => {
+        return (
             <View style={styles.notAddedList}>
                 <NotAdded />
                 <NotAdded />
@@ -87,6 +75,34 @@ const ReplyMember = () => {
                     </View>
                 )}
             </View>
+        );
+    };
+
+    return (
+        <View style={styles.parent}>
+            <View style={styles.header}>
+                <View style={styles.txtContainer}>
+                    <Text style={styles.txt}>Thành viên trả lời tin nhắn</Text>
+                </View>
+                <View style={styles.iconContainer}>
+                    <Pressable onPress={handleShowNotAdded}>
+                        <Ionicons name="add" size={28} color="green" />
+                    </Pressable>
+
+                    {!isShowAdded && (
+                        <Pressable onPress={handleShowDown}>
+                            <Entypo name="chevron-small-down" size={28} color="black" />
+                        </Pressable>
+                    )}
+                    {isShowAdded && (
+                        <Pressable onPress={handleShowUp}>
+                            <Entypo name="chevron-small-up" size={28} color="black" />
+                        </Pressable>
+                    )}
+                </View>
+            </View>
+            <Animated.View layout={LinearTransition.duration(300)}>{isShowAdded && layoutAdded()}</Animated.View>
+            <Animated.View layout={LinearTransition.duration(300)}>{isShowNotAdded && layoutNotAdded()}</Animated.View>
         </View>
     );
 };
