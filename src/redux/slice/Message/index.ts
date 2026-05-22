@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { state_props } from '@src/screen/Message/type';
-import { MessageDialog_Type, MessageDialogProps } from '@src/component/MessageDialog/type';
+import { MessageDialogProps } from '@src/component/MessageDialog/type';
 
 const initialState: state_props = {
     isLoading: false,

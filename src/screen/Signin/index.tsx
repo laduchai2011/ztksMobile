@@ -55,7 +55,7 @@ const Signin = () => {
             .then((res) => {
                 const resData = res.data;
 
-                console.log('resData', resData);
+                console.log('signin', resData);
 
                 if (resData?.isSuccess) {
                     navigation.navigate(NavigateEnum.ROOT_TAB, {

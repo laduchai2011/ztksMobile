@@ -9,7 +9,7 @@ const OneRoom: FC<{ data: number }> = ({ data }) => {
     const imgUrl = 'https://api.5kaquarium.com/service_image_v1/query/image/1778517412032_1_133955780355947187.jpg';
 
     const goToMessage = () => {
-        navigation.navigate(NavigateEnum.MESSAGE);
+        navigation.navigate(NavigateEnum.MESSAGE, { id: 1 });
     };
 
     return (

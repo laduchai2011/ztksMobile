@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import AppReducer from '@src/redux/slice/App';
-// import Home1Reducer from '@src/redux/slice/Home1';
+import AppReducer from '@src/redux/slice/App';
+import HomeReducer from '@src/redux/slice/Home';
 import MessageReducer from '@src/redux/slice/Message';
 // import ManageMembersReducer from '@src/redux/slice/ManageMembers';
 // import MemberReceiveMessageReducer from '@src/redux/slice/MemberReceiveMessage';
@@ -26,7 +26,7 @@ import ProfileReducer from '@src/redux/slice/Profile';
 import { accountRTK } from './query/accountRTK';
 // import { myCustomerRTK } from './query/myCustomerRTK';
 // import { messageV1RTK } from './query/messageV1RTK';
-// import { zaloRTK } from './query/zaloRTK';
+import { zaloRTK } from './query/zaloRTK';
 // import { chatSessionRTK } from './query/chatSessionRTK';
 // import { chatRoomRTK } from './query/chatRoomRTK';
 // import { orderRTK } from './query/orderRTK';
@@ -40,8 +40,8 @@ import { accountRTK } from './query/accountRTK';
 export const store = configureStore({
     reducer: {
         dummy: (state = {}) => state,
-        // AppSlice: AppReducer,
-        // Home1Slice: Home1Reducer,
+        AppSlice: AppReducer,
+        HomeSlice: HomeReducer,
         MessageSlice: MessageReducer,
         // ManageMembersSlice: ManageMembersReducer,
         // MemberReceiveMessageSlice: MemberReceiveMessageReducer,
@@ -67,7 +67,7 @@ export const store = configureStore({
         [accountRTK.reducerPath]: accountRTK.reducer,
         // [myCustomerRTK.reducerPath]: myCustomerRTK.reducer,
         // [messageV1RTK.reducerPath]: messageV1RTK.reducer,
-        // [zaloRTK.reducerPath]: zaloRTK.reducer,
+        [zaloRTK.reducerPath]: zaloRTK.reducer,
         // [chatSessionRTK.reducerPath]: chatSessionRTK.reducer,
         // [chatRoomRTK.reducerPath]: chatRoomRTK.reducer,
         // [orderRTK.reducerPath]: orderRTK.reducer,
@@ -80,10 +80,10 @@ export const store = configureStore({
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(
-            accountRTK.middleware
+            accountRTK.middleware,
             // myCustomerRTK.middleware,
             // messageV1RTK.middleware,
-            // zaloRTK.middleware,
+            zaloRTK.middleware
             // chatSessionRTK.middleware,
             // chatRoomRTK.middleware,
             // orderRTK.middleware,
