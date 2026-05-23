@@ -30,13 +30,21 @@ import { MyResponse } from '@src/dataStruct/response';
 import { DeviceEnum } from '@src/device/type';
 import { setRefreshToken, setAccessToken, setSocketToken } from '@src/token';
 import { setAccountId } from '@src/utility/checkSignin';
+import { getAccessToken, getRefreshToken } from '@src/token';
+import { getAccountId } from '@src/utility/checkSignin';
 
 export const accountRTK = createApi({
     reducerPath: 'accountRTK',
     baseQuery: fetchBaseQuery({
         baseUrl: '',
         prepareHeaders: async (headers) => {
+            const accessToken = await getAccessToken();
+            const refreshToken = await getRefreshToken();
+            const accountId = await getAccountId();
             headers.set('x-device-type', DeviceEnum.MOBILE);
+            headers.set('x-access-token', accessToken || '');
+            headers.set('x-refresh-token', refreshToken || '');
+            headers.set('x-account-id', accountId || '');
             return headers;
         },
     }),
@@ -142,7 +150,7 @@ export const accountRTK = createApi({
                 body,
             }),
 
-            transformResponse: (response: MyResponse<AccountField>, meta) => {
+            transformResponse: async (response: MyResponse<AccountField>, meta) => {
                 const headers = meta?.response?.headers;
 
                 const accessToken = headers?.get('x-access-token');
@@ -151,19 +159,19 @@ export const accountRTK = createApi({
                 const accountId = headers?.get('x-account-id');
 
                 if (accessToken) {
-                    setAccessToken(accessToken);
+                    await setAccessToken(accessToken);
                 }
 
                 if (refreshToken) {
-                    setRefreshToken(refreshToken);
+                    await setRefreshToken(refreshToken);
                 }
 
                 if (socketToken) {
-                    setSocketToken(socketToken);
+                    await setSocketToken(socketToken);
                 }
 
                 if (accountId) {
-                    setAccountId(accountId);
+                    await setAccountId(accountId);
                 }
 
                 return response;

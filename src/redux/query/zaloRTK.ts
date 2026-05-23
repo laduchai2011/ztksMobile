@@ -31,13 +31,21 @@ import { ZaloUserBodyField } from '@src/dataStruct/zalo/user/body';
 import { ZALO_API } from '@src/const/api/zalo';
 import { MyResponse } from '@src/dataStruct/response';
 import { DeviceEnum } from '@src/device/type';
+import { getAccessToken, getRefreshToken } from '@src/token';
+import { getAccountId } from '@src/utility/checkSignin';
 
 export const zaloRTK = createApi({
     reducerPath: 'zaloRTK',
     baseQuery: fetchBaseQuery({
         baseUrl: '',
         prepareHeaders: async (headers) => {
-            headers.set('x-device-type', DeviceEnum.WEB);
+            const accessToken = await getAccessToken();
+            const refreshToken = await getRefreshToken();
+            const accountId = await getAccountId();
+            headers.set('x-device-type', DeviceEnum.MOBILE);
+            headers.set('x-access-token', accessToken || '');
+            headers.set('x-refresh-token', refreshToken || '');
+            headers.set('x-account-id', accountId || '');
             return headers;
         },
     }),

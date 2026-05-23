@@ -8,7 +8,7 @@ import { AppDispatch, RootState } from '@src/redux';
 import { AccountField, AccountInformationField } from '@src/dataStruct/account';
 import { useGetZaloAppWithAccountIdQuery } from '@src/redux/query/zaloRTK';
 import { getSocket } from '@src/socketIo';
-import { set_account, set_accountInformation, set_myAdmin, set_zaloApp } from '@src/redux/slice/App';
+import { set_account, set_accountInformation, set_zaloApp } from '@src/redux/slice/App';
 
 export default function App() {
     const dispatch = useDispatch<AppDispatch>();
@@ -16,7 +16,7 @@ export default function App() {
         (state: RootState) => state.AppSlice.accountInformation
     );
     const account: AccountField | undefined = useSelector((state: RootState) => state.AppSlice.account);
-    const myAdmin: number | undefined = useSelector((state: RootState) => state.AppSlice.myAdmin);
+    // const myAdmin: number | undefined = useSelector((state: RootState) => state.AppSlice.myAdmin);
 
     useEffect(() => {
         if (!account) return;
@@ -70,7 +70,7 @@ export default function App() {
                 if (resData.isSuccess) {
                     if (resData.data) {
                         dispatch(set_accountInformation(resData.data));
-                        dispatch(set_myAdmin(resData.data.addedById || -1));
+                        // dispatch(set_myAdmin(resData.data.addedById || -1));
                     }
                 }
             } catch (error) {
@@ -107,8 +107,8 @@ export default function App() {
         isError: isError_zaloApp,
         error: error_zaloApp,
     } = useGetZaloAppWithAccountIdQuery(
-        { role: accountInformation?.accountType || '', accountId: myAdmin || 0 },
-        { skip: myAdmin === undefined || accountInformation === undefined }
+        { role: accountInformation?.accountType || '', accountId: accountInformation?.addedById || 0 },
+        { skip: accountInformation === undefined }
     );
     useEffect(() => {
         if (isError_zaloApp && error_zaloApp) {

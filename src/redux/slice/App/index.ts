@@ -6,7 +6,7 @@ import { ZaloAppField, ZaloOaField } from '@src/dataStruct/zalo';
 const initialState: state_props = {
     account: undefined,
     accountInformation: undefined,
-    myAdmin: undefined,
+    // myAdmin: undefined,
     zaloApp: undefined,
     selectedOa: undefined,
 };
@@ -21,9 +21,9 @@ const AppSlice = createSlice({
         set_accountInformation: (state, action: PayloadAction<AccountInformationField>) => {
             state.accountInformation = action.payload;
         },
-        set_myAdmin: (state, action: PayloadAction<number>) => {
-            state.myAdmin = action.payload;
-        },
+        // set_myAdmin: (state, action: PayloadAction<number>) => {
+        //     state.myAdmin = action.payload;
+        // },
         set_zaloApp: (state, action: PayloadAction<ZaloAppField>) => {
             state.zaloApp = action.payload;
         },
@@ -33,5 +33,5 @@ const AppSlice = createSlice({
     },
 });
 
-export const { set_account, set_accountInformation, set_myAdmin, set_zaloApp, set_selectedOa } = AppSlice.actions;
+export const { set_account, set_accountInformation, set_zaloApp, set_selectedOa } = AppSlice.actions;
 export default AppSlice.reducer;

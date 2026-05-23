@@ -66,23 +66,6 @@ const OaList = () => {
             });
     }, [dispatch, accountInformation, getZaloOaListWith2Fk, page, zaloApp]);
 
-    useEffect(() => {
-        if (!selectedOa) return;
-
-        let isExist: boolean = false;
-
-        for (let i: number = 0; i < zaloOaList.length; i++) {
-            if (zaloOaList[i].id === selectedOa.id) {
-                isExist = true;
-                break;
-            }
-        }
-
-        if (isExist) {
-            dispatch(set_selectedOa(selectedOa));
-        }
-    }, [dispatch, zaloOaList]);
-
     const handleIsShow = () => {
         setIsShow(!isShow);
     };
@@ -99,7 +82,7 @@ const OaList = () => {
         <View style={styles.parent}>
             <View style={styles.selected}>
                 <View style={styles.selectedText}>
-                    <Text>sdfsdf</Text>
+                    <Text>{selectedOa?.oaName}</Text>
                 </View>
                 {!isShow && (
                     <TouchableOpacity onPress={() => handleIsShow()}>

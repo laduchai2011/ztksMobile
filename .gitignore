@@ -1,3 +1,23 @@
 /node_modules
 dist/
 build/
+# Gradle
+android/.gradle/
+
+# Android native build
+android/app/.cxx/
+
+# Build outputs
+android/build/
+android/app/build/
+
+# CMake
+CMakeFiles/
+.cxx/
+
+# Logs
+*.log
+
+# Binary/cache
+*.bin
+*.lock
