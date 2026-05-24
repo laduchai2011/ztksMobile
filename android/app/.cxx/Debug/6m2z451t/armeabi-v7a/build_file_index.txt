@@ -1,3 +1,4 @@
+D:\ztksMobile\node_modules\@react-native-async-storage\async-storage\android\build\generated\source\codegen\jni\CMakeLists.txt
 D:\ztksMobile\node_modules\react-native-gesture-handler\android\build\generated\source\codegen\jni\CMakeLists.txt
 D:\ztksMobile\node_modules\react-native-keychain\android\build\generated\source\codegen\jni\CMakeLists.txt
 D:\ztksMobile\node_modules\react-native-reanimated\android\build\generated\source\codegen\jni\CMakeLists.txt

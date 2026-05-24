@@ -11,6 +11,7 @@ import { setIsShow_messageDialog, setData_messageDialog, set_isLoading } from '@
 import { set_selectedOa } from '@src/redux/slice/App';
 import { MessageDialog_TypeEnum } from '@src/component/MessageDialog/type';
 import { SEE_MORE } from '@src/const/text';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const OaList = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -66,12 +67,27 @@ const OaList = () => {
             });
     }, [dispatch, accountInformation, getZaloOaListWith2Fk, page, zaloApp]);
 
+    useEffect(() => {
+        AsyncStorage.getItem('selectedOa').then((value) => {
+            if (value) {
+                const parsedValue: ZaloOaField = JSON.parse(value);
+                for (let i = 0; i < zaloOaList.length; i++) {
+                    if (zaloOaList[i].id === parsedValue.id) {
+                        dispatch(set_selectedOa(parsedValue));
+                        break;
+                    }
+                }
+            }
+        });
+    }, [zaloOaList, dispatch]);
+
     const handleIsShow = () => {
         setIsShow(!isShow);
     };
 
-    const handleSelected = (item: ZaloOaField) => {
+    const handleSelected = async (item: ZaloOaField) => {
         dispatch(set_selectedOa(item));
+        await AsyncStorage.setItem('selectedOa', JSON.stringify(item));
     };
 
     const handleSeeMore = () => {

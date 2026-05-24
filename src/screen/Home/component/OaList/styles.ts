@@ -20,5 +20,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         height: 30,
+        backgroundColor: '#cfcfcf',
+        padding: 3,
     },
 });

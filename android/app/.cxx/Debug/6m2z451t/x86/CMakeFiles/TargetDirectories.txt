@@ -1,6 +1,9 @@
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/CMakeFiles/appmodules.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/CMakeFiles/edit_cache.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/CMakeFiles/rebuild_cache.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rnasyncstorage_autolinked_build/CMakeFiles/edit_cache.dir
+D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rnasyncstorage_autolinked_build/CMakeFiles/rebuild_cache.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/edit_cache.dir
 D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/rebuild_cache.dir

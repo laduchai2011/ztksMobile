@@ -1,7 +1,7 @@
 // import { SOCKET_URL } from '@src/const/api/socketUrl';
 import { SocketType } from '@src/dataStruct/socketIo';
 import io from 'socket.io-client';
-import { getCookie } from '@src/utility/cookie';
+import { getSocketToken } from '@src/token';
 
 let socket: SocketType | null = null;
 
@@ -10,7 +10,7 @@ export const getSocket = () => {
         // socket = io(SOCKET_URL || '', { path: '/socket.io/', auth: { token: getCookie('socketToken') || '' } });
         socket = io('wss://socketapp.5kaquarium.com', {
             path: '/socket.io/',
-            auth: { token: getCookie('socketToken') || '' },
+            auth: { token: getSocketToken() || '' },
         });
 
         socket.on('connect', () => {

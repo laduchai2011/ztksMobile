@@ -44,6 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64/rnasyncstorage_autolinked_build/cmake_install.cmake")
   include("D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64/rngesturehandler_codegen_autolinked_build/cmake_install.cmake")
   include("D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64/RNKeychainSpec_autolinked_build/cmake_install.cmake")
   include("D:/ztksMobile/android/app/.cxx/Debug/6m2z451t/x86_64/rnreanimated_autolinked_build/cmake_install.cmake")

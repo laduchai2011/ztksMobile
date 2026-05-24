@@ -24,11 +24,10 @@ import ProfileReducer from '@src/redux/slice/Profile';
 // import RegisterPostReducer from '@src/redux/slice/RegisterPost';
 // import LeaveReducer from '@src/redux/slice/Leave';
 import { accountRTK } from './query/accountRTK';
-// import { myCustomerRTK } from './query/myCustomerRTK';
-// import { messageV1RTK } from './query/messageV1RTK';
+import { messageV1RTK } from './query/messageV1RTK';
 import { zaloRTK } from './query/zaloRTK';
 // import { chatSessionRTK } from './query/chatSessionRTK';
-// import { chatRoomRTK } from './query/chatRoomRTK';
+import { chatRoomRTK } from './query/chatRoomRTK';
 // import { orderRTK } from './query/orderRTK';
 // import { agentRTK } from './query/agentRTK';
 // import { noteRTK } from './query/noteRTK';
@@ -65,11 +64,10 @@ export const store = configureStore({
         // RegisterPostSlice: RegisterPostReducer,
         // LeaveSlice: LeaveReducer,
         [accountRTK.reducerPath]: accountRTK.reducer,
-        // [myCustomerRTK.reducerPath]: myCustomerRTK.reducer,
-        // [messageV1RTK.reducerPath]: messageV1RTK.reducer,
+        [messageV1RTK.reducerPath]: messageV1RTK.reducer,
         [zaloRTK.reducerPath]: zaloRTK.reducer,
         // [chatSessionRTK.reducerPath]: chatSessionRTK.reducer,
-        // [chatRoomRTK.reducerPath]: chatRoomRTK.reducer,
+        [chatRoomRTK.reducerPath]: chatRoomRTK.reducer,
         // [orderRTK.reducerPath]: orderRTK.reducer,
         // [agentRTK.reducerPath]: agentRTK.reducer,
         // [noteRTK.reducerPath]: noteRTK.reducer,
@@ -81,11 +79,10 @@ export const store = configureStore({
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(
             accountRTK.middleware,
-            // myCustomerRTK.middleware,
-            // messageV1RTK.middleware,
-            zaloRTK.middleware
+            messageV1RTK.middleware,
+            zaloRTK.middleware,
             // chatSessionRTK.middleware,
-            // chatRoomRTK.middleware,
+            chatRoomRTK.middleware
             // orderRTK.middleware,
             // agentRTK.middleware,
             // noteRTK.middleware,
