@@ -16,6 +16,7 @@ import {
 } from '@src/dataStruct/zalo/hookData';
 import { MessageV1Field } from '@src/dataStruct/message_v1';
 import MsgText from './MsgText';
+import MsgImage from './MsgImage';
 
 const MyMsg: FC<{
     data: MessageV1Field<ZaloMessageType>;
@@ -29,13 +30,13 @@ const MyMsg: FC<{
                 const data_t = data as MessageV1Field<MessageTextField>;
                 return <MsgText data={data_t} />;
             }
-            // case Zalo_Event_Name_Enum.oa_send_image: {
-            //     const data_t = data as MessageV1Field<MessageImageField | MessageMultiImageField>;
-            //     return <MsgImage data={data_t} />;
-            // }
+            case Zalo_Event_Name_Enum.oa_send_image: {
+                const data_t = data as MessageV1Field<MessageImageField | MessageMultiImageField>;
+                return <MsgImage data={data_t} />;
+            }
             // case Zalo_Event_Name_Enum.oa_send_video: {
             //     const data_t = data as MessageV1Field<MessageVideoField>;
-            //     return <MsgVideo msgList_element={msgList_element} data={data_t} />;
+            //     return <MsgVideo data={data_t} />;
             // }
             // case Zalo_Event_Name_Enum.oa_send_audio: {
             //     const data_t = data as MessageV1Field<MessageAudioField>;
@@ -62,7 +63,7 @@ const MyMsg: FC<{
                     <Entypo name="reply" size={22} color="gray" />
                 </View>
                 <View style={styles.msgContainer}>{msg()}</View>
-                <View>
+                <View style={styles.avatarContainer}>
                     <FastImage
                         style={styles.avatar}
                         source={{

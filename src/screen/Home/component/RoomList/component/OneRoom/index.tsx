@@ -222,7 +222,11 @@ const OneRoom: FC<{ chatRoomRoleSchema: ChatRoomRoleSchema }> = ({ chatRoomRoleS
                 </View>
                 <View style={styles.nameContainer}>
                     <Text style={styles.name}>{zaloUser?.data.display_name}</Text>
-                    <Text style={styles.message}>{`${handleWhoSend()}: ${handleMemberSend()}: ${note}`}</Text>
+                    <Text
+                        style={styles.message}
+                        numberOfLines={1}
+                        ellipsizeMode="tail"
+                    >{`${handleWhoSend()}: ${handleMemberSend()}: ${note}`}</Text>
                 </View>
                 <View style={styles.timeContainer}>
                     {newMessage.length === 0 && lastMessage && <Text>{timeAgoSmart(lastMessage.timestamp)}</Text>}

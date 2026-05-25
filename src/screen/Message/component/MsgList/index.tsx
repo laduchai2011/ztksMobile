@@ -1,5 +1,5 @@
 import React, { FC, memo, useState, useRef, useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View, FlatList, ActivityIndicator } from 'react-native';
 import { styles } from './styles';
 import MyMsg from './component/MyMsg';
 import {
@@ -15,7 +15,12 @@ import { SocketMessageField } from '@src/dataStruct/message_v1';
 const MsgList: FC<{ id: number }> = ({ id }) => {
     const [messages, setMessages] = useState<MessageV1Field<ZaloMessageType>[]>([]);
     const size = 10;
+    const flatListRef = useRef<FlatList>(null);
+    const [loading, setLoading] = useState(false);
+    const [loadingMore, setLoadingMore] = useState(false);
+    const loadingRef = useRef(false);
     const lockLoadMore = useRef<boolean>(true);
+    const firstLoadedRef = useRef(false);
     const [cursor, setCursor] = useState<string | null>(null);
     const [isLoadingMore, setIsLoadingMore] = useState(false);
     const [hasMore, setHasMore] = useState(true);
@@ -37,12 +42,6 @@ const MsgList: FC<{ id: number }> = ({ id }) => {
                 });
         };
         handleDelMsg();
-
-        const scrollToBottom = () => {
-            // if (!bottom_element.current) return;
-            // const bottomElement = bottom_element.current;
-            // bottomElement.scrollIntoView({ behavior: 'auto' });
-        };
 
         const onSocketMessage = (socketMsg: SocketMessageField) => {
             const msgId = socketMsg._id;
@@ -72,44 +71,93 @@ const MsgList: FC<{ id: number }> = ({ id }) => {
     const [getMessages] = useLazyGetMessagesForChatScreenQuery();
     useEffect(() => {
         if (!id) return;
+        if (firstLoadedRef.current) return;
         getMessages({ cursor: null, size: size, chatRoomId: Number(id) })
             .then((res) => {
                 const resData = res.data;
                 if (resData?.isSuccess && resData.data) {
-                    setMessages(resData.data?.items);
+                    // xep lai du lieu
+                    const mesArray: MessageV1Field<ZaloMessageType>[] = [];
+                    for (let i: number = 0; i < resData.data.items.length; i++) {
+                        mesArray.unshift(resData.data.items[i]);
+                    }
+                    setMessages(mesArray);
                     setCursor(resData.data.cursor);
                     setHasMore(resData.data?.items.length === size);
                 }
-                // requestAnimationFrame(() => {
-                //     if (!parent_element.current) return;
-                //     const parentElement = parent_element.current;
-                //     parentElement.scrollTop = parentElement.scrollHeight;
-                // });
             })
             .catch((err) => console.error(err))
             .finally(() => (lockLoadMore.current = false));
     }, [getMessages, id]);
 
-    const list_message = messages.map((item, index) => {
-        const eventName = item.event_name;
-        const isUserSend = eventName.startsWith('user_send');
-        const isOaSend = eventName.startsWith('oa_send');
+    const loadMore = async () => {
+        if (lockLoadMore.current) return;
+        if (loadingRef.current) return;
+        if (!hasMore) return;
+        if (!cursor) return;
 
-        // if (isUserSend) {
-        //     return <UserMsg key={index} msgList_element={parent_element.current} data={item} messages={messages} />;
-        // }
+        try {
+            loadingRef.current = true;
+            setLoadingMore(true);
 
-        if (isOaSend) {
-            return <MyMsg key={index} data={item} messages={messages} />;
+            const res = await getMessages({
+                cursor,
+                size: size,
+                chatRoomId: id,
+            });
+
+            const resData = res.data;
+
+            if (resData?.isSuccess && resData.data) {
+                const oldMessages = resData.data.items || [];
+
+                // xep lai du lieu
+                const mesArray: MessageV1Field<ZaloMessageType>[] = [];
+                for (let i: number = 0; i < oldMessages.length; i++) {
+                    mesArray.unshift(resData.data.items[i]);
+                }
+
+                setMessages((prev) => [...prev, ...mesArray]);
+                // setMessages((pre) => [...(resData.data?.items || []), ...pre]);
+
+                setCursor(resData.data.cursor);
+
+                if (oldMessages.length < size) {
+                    setHasMore(false);
+                }
+            }
+        } catch (err) {
+            console.error(err);
+        } finally {
+            loadingRef.current = false;
+            setLoadingMore(false);
         }
-
-        return;
-    });
+    };
 
     return (
         <View style={styles.parent}>
-            {/* <MyMsg /> */}
-            {list_message}
+            <FlatList
+                style={styles.list}
+                ref={flatListRef}
+                data={messages}
+                inverted
+                keyExtractor={(item) => item.message_id}
+                renderItem={({ item }) => {
+                    const eventName = item.event_name;
+
+                    const isOaSend = eventName.startsWith('oa_send');
+
+                    if (isOaSend) {
+                        return <MyMsg key={item.message_id} data={item} messages={messages} />;
+                    }
+
+                    return null;
+                }}
+                onEndReached={loadMore}
+                onEndReachedThreshold={0.2}
+                ListFooterComponent={loadingMore ? <ActivityIndicator size="small" /> : null}
+                showsVerticalScrollIndicator={false}
+            />
         </View>
     );
 };
