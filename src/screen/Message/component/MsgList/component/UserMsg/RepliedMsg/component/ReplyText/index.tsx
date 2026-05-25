@@ -7,7 +7,7 @@ import { MessageTextField } from '@src/dataStruct/zalo/hookData';
 const ReplyText: FC<{ data: MessageV1Field<MessageTextField> }> = ({ data }) => {
     return (
         <View style={styles.parent}>
-            <Text>ReplyText</Text>
+            <Text>{data.message.text}</Text>
         </View>
     );
 };

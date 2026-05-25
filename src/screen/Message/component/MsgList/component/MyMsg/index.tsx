@@ -17,6 +17,8 @@ import {
 import { MessageV1Field } from '@src/dataStruct/message_v1';
 import MsgText from './MsgText';
 import MsgImage from './MsgImage';
+import MsgVideo from './MsgVideo';
+import MsgSticker from './MsgSticker';
 
 const MyMsg: FC<{
     data: MessageV1Field<ZaloMessageType>;
@@ -34,10 +36,10 @@ const MyMsg: FC<{
                 const data_t = data as MessageV1Field<MessageImageField | MessageMultiImageField>;
                 return <MsgImage data={data_t} />;
             }
-            // case Zalo_Event_Name_Enum.oa_send_video: {
-            //     const data_t = data as MessageV1Field<MessageVideoField>;
-            //     return <MsgVideo data={data_t} />;
-            // }
+            case Zalo_Event_Name_Enum.oa_send_video: {
+                const data_t = data as MessageV1Field<MessageVideoField>;
+                return <MsgVideo data={data_t} />;
+            }
             // case Zalo_Event_Name_Enum.oa_send_audio: {
             //     const data_t = data as MessageV1Field<MessageAudioField>;
             //     return <MsgAudio data={data_t} />;
@@ -46,10 +48,10 @@ const MyMsg: FC<{
             //     const data_t = data as MessageV1Field<MessageFileField>;
             //     return <MsgFile data={data_t} />;
             // }
-            // case Zalo_Event_Name_Enum.oa_send_sticker: {
-            //     const data_t = data as MessageV1Field<MessageStickerField>;
-            //     return <MsgSticker data={data_t} />;
-            // }
+            case Zalo_Event_Name_Enum.oa_send_sticker: {
+                const data_t = data as MessageV1Field<MessageStickerField>;
+                return <MsgSticker data={data_t} />;
+            }
             default: {
                 return;
             }

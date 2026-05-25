@@ -1,6 +1,7 @@
 import React, { FC, memo, useState, useRef, useEffect } from 'react';
 import { View, FlatList, ActivityIndicator } from 'react-native';
 import { styles } from './styles';
+import UserMsg from './component/UserMsg';
 import MyMsg from './component/MyMsg';
 import {
     useLazyGetMessagesForChatScreenQuery,
@@ -145,7 +146,12 @@ const MsgList: FC<{ id: number }> = ({ id }) => {
                 renderItem={({ item }) => {
                     const eventName = item.event_name;
 
+                    const isUserSend = eventName.startsWith('user_send');
                     const isOaSend = eventName.startsWith('oa_send');
+
+                    if (isUserSend) {
+                        return <UserMsg key={item.message_id} data={item} messages={messages} />;
+                    }
 
                     if (isOaSend) {
                         return <MyMsg key={item.message_id} data={item} messages={messages} />;
